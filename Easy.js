@@ -52,7 +52,7 @@ var romanToInt = function (s) {
 
 };
 
-console.log(romanToInt("LVIII"))
+// console.log(romanToInt("LVIII"))
 
 
 // 9. Palindrome Number
@@ -62,18 +62,18 @@ console.log(romanToInt("LVIII"))
  * @return {boolean}
  */
 var isPalindrome = function (x) {
-    if (x < 0 || x % 10 === 0 && x !== 0) {
+    if (x < 0 || (x % 10 === 0 && x !== 0)) {
         return false;
     }
-    let reversedNum = 0;
-    let temp = x
 
-    while (x < reversedNum) {
-        reversedNum = reversedNum * 10 + temp % 10
-        temp = temp / 10
-        console.log({ reversedNum, temp })
+    let temp = x;
+    let reversedNum = 0;
+
+    while (temp > 0) {
+        let lastDigit = temp % 10
+        reversedNum = reversedNum * 10 + lastDigit
+        temp = Math.floor(temp / 10)
     }
-    
     return x === reversedNum
 };
 
