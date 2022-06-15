@@ -46,4 +46,4 @@ var longestCommonPrefix = function (strs) {
 };
 
 // console.log(longestCommonPrefix(["kplas", "awlas", "lwqelas"]))
-console.log(longestCommonPrefix(["flower", "flow", "flight"]))
+console.log(longestCommonPrefix(["fqloererwer", "fqlerow", "hfhqlerreight"]))
