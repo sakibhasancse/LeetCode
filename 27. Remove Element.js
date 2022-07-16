@@ -20,12 +20,17 @@
 
 
 var removeElement = function (nums, val) {
-  const result = []
   let count = 0
   for (var i = 0; i < nums.length; i++) {
-    if (nums[i] !== val) result.push(nums[i])
-    else count = count + 1
+    if (nums[i] !== val) {
+      nums[count] = nums[i];
+      count++
+    }
   }
-  return result.length - count
+  return count
 };
-console.log(removeElement([3, 2, 2, 3], 3))
+
+let nums1 = [3, 2, 2, 3]
+let nums2 = [0, 1, 2, 2, 3, 0, 4, 2]
+console.log(removeElement(nums1, 3), nums1)
+console.log(removeElement(nums2, 2), nums2)
