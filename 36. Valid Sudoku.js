@@ -26,22 +26,53 @@
 // };
 
 
+// var isValidSudoku = function (board) {
+//   const set = new Set();
+//   for (let i = 0; i < 9; i++) {
+//     for (let j = 0; j < 9; j++) {
+//       if (board[i][j] != ".") {
+//         const colHash = `col ${i} i ${board[i][j]}`;
+//         const rowHash = `row ${i} j ${board[i][j]}`;
+//         const boxHash = `box ${Math.floor(i / 3)} ${Math.floor(j / 3)} ${board[i][j]
+//           }`;
+//         if (set.has(rowHash) || set.has(colHash) || set.has(boxHash)) {
+//           return false;
+//         }
+//         set.add(rowHash);
+//         set.add(colHash);
+//         set.add(boxHash);
+//       }
+//     }
+//   }
+//   return true;
+// };
+
+
 var isValidSudoku = function (board) {
-  const set = new Set();
+  const rows = {};
+  const colum = {};
+  const squire = {};
   for (let i = 0; i < 9; i++) {
     for (let j = 0; j < 9; j++) {
-      if (board[i][j] != ".") {
-        const colHash = `col ${i} i ${board[i][j]}`;
-        const rowHash = `row ${i} j ${board[i][j]}`;
-        const boxHash = `box ${Math.floor(i / 3)} ${Math.floor(j / 3)} ${board[i][j]
-          }`;
-        if (set.has(rowHash) || set.has(colHash) || set.has(boxHash)) {
-          return false;
-        }
-        set.add(rowHash);
-        set.add(colHash);
-        set.add(boxHash);
+      const element = board[i][j];
+
+      if (element === ".") {
+        continue;
       }
+
+      const grid = `${Math.floor(r / 3)}${Math.floor(c / 3)}`;
+      if (!rows[i]) rows[i] = new Set();
+      if (!colum[j]) colum[j] = new Set();
+      if (!squire[grid]) squire[grid] = new Set();
+
+      if (rows[i].has(element) || colum[j].has(element) || squire[grid].has(element)) {
+        return false;
+      }
+
+      rows[i].add(element);
+      colum[j].add(element);
+      squire[grid].add(element);
+
     }
   }
   return true;
