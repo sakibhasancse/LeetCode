@@ -56,5 +56,25 @@ var canConstruct = function (ransomNote, magazine) {
 };
 
 
+var canConstruct = function (ransomNote, magazine) {
+
+  const ransonLength = ransomNote.length;
+  const magazineLength = magazine.length;
+  if (magazineLength < ransonLength) return false
+
+  let hash = {}
+  for (var i = 0; i < magazineLength; i++) {
+    const element = magazine[i]
+    if (hash[element])  hash[element]++
+    else hash[element] = 1
+  }
+  for (var i = 0; i < ransonLength; i++) {
+    const element = ransomNote[i]
+    if (hash[element]) hash[element]--
+    else return false
+  }
+  return true
+};
+
 console.log(canConstruct("swq",
   "swqdf"))
