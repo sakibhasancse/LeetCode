@@ -13,6 +13,7 @@ var timeRequiredToBuy = function (tickets, k) {
       i++;
       continue;
     }
+
     tickets[i % n]--;
     i++;
     totalTime++
