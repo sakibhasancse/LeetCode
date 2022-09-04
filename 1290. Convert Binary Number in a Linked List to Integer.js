@@ -10,14 +10,17 @@
  * @return {number}
  */
 var getDecimalValue = function (head) {
-  let number = 0;
-  let totalLength = 0
+  let numbers = [];
+
   while (head) {
-    console.log({ number, totalLength, number, head, val: head.val, next: head.next })
-    number = number + (head.val * 2 ** totalLength)
-    totalLength++
+    numbers.unshift(head.val)
     head = head.next
   }
-  console.log({ number })
+  let number = 0;
+  for (var i = 0; i < numbers.length; i++) {
+    console.log({ i, numbers: numbers[i], number })
+    if (numbers[i]) number = number + (numbers[i] * 2 ** i)
+
+  }
   return number
 };
