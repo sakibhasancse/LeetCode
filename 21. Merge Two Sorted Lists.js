@@ -14,14 +14,13 @@ var mergeTwoLists = function(list1, list2) {
     if(list1 == null) return list2
     else if(list2 == null) return list1
 
-    let head1 = list1
-    let head2 = list2
-    while(head2 !== null){
-
+    if(list1.val <= list2.val){
+        list1.next = mergeTwoLists(list1.next, list2);
+        return list1;
     }
-
-    console.log({head1, head2})
-    return head1
+    // we will call recursive l1 whole list and l2 -> next
+    else {
+        list2.next = mergeTwoLists(list1, list2.next);
+        return list2;
+    }
 };
-// [1,2,4]
-// [1,3,4]
