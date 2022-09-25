@@ -20,7 +20,6 @@
 //   }
 // };
 
-
 // var canConstruct = function (ransomNote, magazine) {
 //   let hashmap = {};
 
@@ -39,42 +38,38 @@
 //   return !Object.keys(hashmap).length
 // };
 
-
-
 var canConstruct = function (ransomNote, magazine) {
-  const ransomNoteArray = ransomNote.split('');
+  const ransomNoteArray = ransomNote.split("");
 
   for (let i = 0; i < ransomNoteArray.length; i++) {
     const index = magazine.search(ransomNoteArray[i]);
     if (index >= 0) {
-      magazine = magazine.slice(0, index) + magazine.slice(index + 1, magazine.length);
+      magazine =
+        magazine.slice(0, index) + magazine.slice(index + 1, magazine.length);
     } else {
-      return false
+      return false;
     }
   }
   return true;
 };
 
-
 var canConstruct = function (ransomNote, magazine) {
-
   const ransonLength = ransomNote.length;
   const magazineLength = magazine.length;
-  if (magazineLength < ransonLength) return false
+  if (magazineLength < ransonLength) return false;
 
-  let hash = {}
+  let hash = {};
   for (var i = 0; i < magazineLength; i++) {
-    const element = magazine[i]
-    if (hash[element])  hash[element]++
-    else hash[element] = 1
+    const element = magazine[i];
+    if (hash[element]) hash[element]++;
+    else hash[element] = 1;
   }
   for (var i = 0; i < ransonLength; i++) {
-    const element = ransomNote[i]
-    if (hash[element]) hash[element]--
-    else return false
+    const element = ransomNote[i];
+    if (hash[element]) hash[element]--;
+    else return false;
   }
-  return true
+  return true;
 };
 
-console.log(canConstruct("swq",
-  "swqdf"))
+console.log(canConstruct("swq", "swqdf"));

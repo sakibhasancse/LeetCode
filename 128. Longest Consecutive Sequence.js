@@ -4,7 +4,7 @@
  */
 var longestConsecutive = function (nums) {
   let result = [];
-  const sortedArray = nums.sort()
+  const sortedArray = nums.sort();
 
   // return [...new Set(sortedArray)].length
   for (let i = 0; i < sortedArray.length; i++) {
@@ -12,8 +12,8 @@ var longestConsecutive = function (nums) {
     if (element >= 9) {
       continue;
     }
-    result.push(element)
+    result.push(element);
   }
-  console.log({ result })
-  return [...new Set(sortedArray)].length
+  console.log({ result });
+  return [...new Set(sortedArray)].length;
 };

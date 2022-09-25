@@ -13,14 +13,13 @@ var getDecimalValue = function (head) {
   let numbers = [];
 
   while (head) {
-    numbers.unshift(head.val)
-    head = head.next
+    numbers.unshift(head.val);
+    head = head.next;
   }
   let number = 0;
   for (var i = 0; i < numbers.length; i++) {
-    console.log({ i, numbers: numbers[i], number })
-    if (numbers[i]) number = number + (numbers[i] * 2 ** i)
-
+    console.log({ i, numbers: numbers[i], number });
+    if (numbers[i]) number = number + numbers[i] * 2 ** i;
   }
-  return number
+  return number;
 };

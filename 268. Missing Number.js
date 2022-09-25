@@ -10,4 +10,4 @@ var missingNumber = function (nums) {
   return sum;
 };
 
-console.log(missingNumber([3, 2, 1, 0, 4, 6]))
+console.log(missingNumber([3, 2, 1, 0, 4, 6]));

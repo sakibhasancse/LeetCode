@@ -18,19 +18,18 @@
 // Note that the five elements can be returned in any order.
 // It does not matter what you leave beyond the returned k(hence they are underscores)
 
-
 var removeElement = function (nums, val) {
-  let count = 0
+  let count = 0;
   for (var i = 0; i < nums.length; i++) {
     if (nums[i] !== val) {
       nums[count] = nums[i];
-      count++
+      count++;
     }
   }
-  return count
+  return count;
 };
 
-let nums1 = [3, 2, 2, 3]
-let nums2 = [0, 1, 2, 2, 3, 0, 4, 2]
-console.log(removeElement(nums1, 3), nums1)
-console.log(removeElement(nums2, 2), nums2)
+let nums1 = [3, 2, 2, 3];
+let nums2 = [0, 1, 2, 2, 3, 0, 4, 2];
+console.log(removeElement(nums1, 3), nums1);
+console.log(removeElement(nums2, 2), nums2);

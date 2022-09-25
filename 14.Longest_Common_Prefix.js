@@ -8,7 +8,6 @@
 // Input: strs = ["flower", "flow", "flight"]
 // Output: "fl"
 
-
 // Input: strs = ["dog", "racecar", "car"]
 // Output: ""
 // Explanation: There is no common prefix among the input strings.
@@ -31,8 +30,6 @@
 //   return prefix.join('')
 // };
 
-
-
 var longestCommonPrefix = function (strs) {
   let prefix = strs[0];
 
@@ -46,4 +43,4 @@ var longestCommonPrefix = function (strs) {
 };
 
 // console.log(longestCommonPrefix(["kplas", "awlas", "lwqelas"]))
-console.log(longestCommonPrefix(["fqloererwer", "fqlerow", "hfhqlerreight"]))
+console.log(longestCommonPrefix(["fqloererwer", "fqlerow", "hfhqlerreight"]));

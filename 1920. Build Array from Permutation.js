@@ -20,12 +20,11 @@
 //   = [nums[5], nums[0], nums[1], nums[2], nums[3], nums[4]]
 //   = [4, 5, 0, 1, 2, 3]
 
-
 var buildArray = function (nums) {
   const result = [];
   for (var i = 0; i < nums.length; i++) {
-    const element = nums[i]
-    result.push(nums[element])
+    const element = nums[i];
+    result.push(nums[element]);
   }
-  return result
+  return result;
 };

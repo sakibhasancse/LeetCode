@@ -12,7 +12,6 @@
 // Input: s = "rat", t = "car"
 // Output: false
 
-
 // var isAnagram = function (s, t) {
 //   if (s.length !== t.length) return false
 
@@ -24,17 +23,17 @@
 // };
 
 var isAnagram = function (s, t) {
-  if (s.length !== t.length) return false
+  if (s.length !== t.length) return false;
 
-  let sCounts = {}, tCounts = {}
+  let sCounts = {},
+    tCounts = {};
   for (let word = 0; word < s.length; word++) {
-    sCounts[s[word]] = 1 + sCounts[s[word]] || 1
-    tCounts[t[word]] = 1 + tCounts[t[word]] || 1
+    sCounts[s[word]] = 1 + sCounts[s[word]] || 1;
+    tCounts[t[word]] = 1 + tCounts[t[word]] || 1;
   }
   for (let rr in sCounts) {
-    if (sCounts[rr] !== tCounts[rr]) return false
+    if (sCounts[rr] !== tCounts[rr]) return false;
   }
-  return true
-
+  return true;
 };
-console.log(isAnagram("anagram", "mnagraa"))
+console.log(isAnagram("anagram", "mnagraa"));

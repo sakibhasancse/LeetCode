@@ -22,10 +22,9 @@
 //   return !string
 // };
 
-
 var isValid = function (s) {
   const stack = [];
-  const openSet = new Set(['(', '{', '[']);
+  const openSet = new Set(["(", "{", "["]);
   for (let i = 0; i < s.length; i += 1) {
     if (openSet.has(s[i])) {
       stack.push(s[i]);
@@ -33,6 +32,6 @@ var isValid = function (s) {
   }
 
   return stack.length === 0;
-}
+};
 
-console.log(isValid("[()[]]{}[]"))
+console.log(isValid("[()[]]{}[]"));

@@ -9,13 +9,29 @@
  * @param {ListNode} head
  * @return {ListNode}
  */
-var mergeNodes = function(head) {
-    let slow = head.next
-    let fast = slow.next
-    while(fast){
 
-        fast = fast.next
+var mergeNodes = function (head) {
+  if (!head || !head?.next) return head;
+  // head = head.next; // This step is required as the first val of head is always going to be 0
+  let curr = head,
+    result = null;
+  let sum = 0;
+
+  while (curr?.next) {
+    if (curr.val != 0) {
+      sum = 0;
+      result.val += curr.val;
+    } else {
+      if (result == null) result = head;
+      else {
+        result = result.next;
+        result.val = 0;
+      }
     }
-    console.log({slow, fast})
-    return head
+    sum += head.val;
+    curr = curr.next;
+  }
+  result.next = null;
+  console.log({ result });
+  return head;
 };

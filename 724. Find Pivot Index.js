@@ -6,17 +6,16 @@ var pivotIndex = function (nums) {
   let sum = 0;
   let leftsum = 0;
 
-  nums.map(item => {
-    sum += item
-  })
+  nums.map((item) => {
+    sum += item;
+  });
   for (var i = 0; i < nums.length; i++) {
-    console.log({ leftsum, sum, n: nums[i] })
-    if (leftsum === sum - leftsum - nums[i]) return i
-    leftsum += nums[i]
+    console.log({ leftsum, sum, n: nums[i] });
+    if (leftsum === sum - leftsum - nums[i]) return i;
+    leftsum += nums[i];
   }
-  return -1
+  return -1;
 };
-
 
 // Input: nums = [2, 1, -1]
 // Output: 0

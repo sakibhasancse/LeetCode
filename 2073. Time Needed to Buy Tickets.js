@@ -16,7 +16,7 @@ var timeRequiredToBuy = function (tickets, k) {
 
     tickets[i % n]--;
     i++;
-    totalTime++
+    totalTime++;
   }
-  return totalTime
+  return totalTime;
 };

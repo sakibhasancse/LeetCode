@@ -4,21 +4,19 @@
  */
 
 var maximumWealth = function (accounts) {
-
   let richestCustomer = 0;
 
   for (let customer = 0; customer < accounts.length; customer++) {
     const bank = accounts[customer];
-    let totalAmount = 0
+    let totalAmount = 0;
     for (let amount = 0; amount < bank.length; amount++) {
       const wealth = bank[amount];
-      totalAmount += wealth
+      totalAmount += wealth;
     }
-    if (richestCustomer < totalAmount) richestCustomer = totalAmount
+    if (richestCustomer < totalAmount) richestCustomer = totalAmount;
   }
-  return richestCustomer
+  return richestCustomer;
 };
-
 
 // Example 1:
 // Input: accounts = [[1, 2, 3], [3, 2, 1]]

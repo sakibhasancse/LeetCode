@@ -1,4 +1,3 @@
-
 <h1 align="center">LeetCode</h1>
 
 <p align="center">
@@ -21,6 +20,6 @@
 
 <h4 align="center"> 
 	🚧  LeetCode problem solving 🚀 
-</h4> 
+</h4>
 
-<hr> 
+<hr>

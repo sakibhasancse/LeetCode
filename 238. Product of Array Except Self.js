@@ -19,24 +19,23 @@
 //   )
 // }
 
-
 const productExceptSelf = function (nums) {
   const numberSize = nums.length;
-  const result = []
+  const result = [];
 
-  let product = 1
+  let product = 1;
   for (let i = 0; i < numberSize; i++) {
     const element = nums[i];
     product *= element;
-    result.push(product)
+    result.push(product);
   }
 
-  product = 1
+  product = 1;
   for (let i = numberSize - 1; i > 0; i--) {
     const element = nums[i];
-    result[i] = result[i - 1] * product
+    result[i] = result[i - 1] * product;
     product *= element;
   }
-  result[0] = product
-  return result
-}
+  result[0] = product;
+  return result;
+};

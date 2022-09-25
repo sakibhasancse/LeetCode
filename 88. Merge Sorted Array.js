@@ -6,7 +6,6 @@
  * @return {void} Do not return anything, modify nums1 in-place instead.
  */
 
-
 // Example 1:
 
 // Input: nums1 = [1, 2, 3, 0, 0, 0], m = 3, nums2 = [2, 5, 6], n = 3
@@ -51,5 +50,5 @@ var merge = function (nums1, m, nums2, n) {
   }
 };
 // merge([1, 2, 3, 0, 0, 0], 3, [2, 5, 6], 3)
-merge([1], 1, [], 0)
+merge([1], 1, [], 0);
 // merge([0], 0, [1], 1)
