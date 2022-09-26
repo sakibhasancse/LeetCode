@@ -21,10 +21,10 @@
 //   = [4, 5, 0, 1, 2, 3]
 
 var buildArray = function (nums) {
-  const result = [];
-  for (var i = 0; i < nums.length; i++) {
-    const element = nums[i];
-    result.push(nums[element]);
-  }
-  return result;
+    const result = [];
+    for (var i = 0; i < nums.length; i++) {
+        const element = nums[i];
+        result.push(nums[element]);
+    }
+    return result;
 };

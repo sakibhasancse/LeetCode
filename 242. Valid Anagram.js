@@ -23,17 +23,17 @@
 // };
 
 var isAnagram = function (s, t) {
-  if (s.length !== t.length) return false;
+    if (s.length !== t.length) return false;
 
-  let sCounts = {},
-    tCounts = {};
-  for (let word = 0; word < s.length; word++) {
-    sCounts[s[word]] = 1 + sCounts[s[word]] || 1;
-    tCounts[t[word]] = 1 + tCounts[t[word]] || 1;
-  }
-  for (let rr in sCounts) {
-    if (sCounts[rr] !== tCounts[rr]) return false;
-  }
-  return true;
+    let sCounts = {},
+        tCounts = {};
+    for (let word = 0; word < s.length; word++) {
+        sCounts[s[word]] = 1 + sCounts[s[word]] || 1;
+        tCounts[t[word]] = 1 + tCounts[t[word]] || 1;
+    }
+    for (let rr in sCounts) {
+        if (sCounts[rr] !== tCounts[rr]) return false;
+    }
+    return true;
 };
-console.log(isAnagram("anagram", "mnagraa"));
+console.log(isAnagram('anagram', 'mnagraa'));

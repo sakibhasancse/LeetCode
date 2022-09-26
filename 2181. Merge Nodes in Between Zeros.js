@@ -11,21 +11,21 @@
  */
 
 var mergeNodes = function (head) {
-  if (!head || !head?.next) return head;
-  let curr = head,
-    result = null;
+    if (!head || !head?.next) return head;
+    let curr = head,
+        result = null;
 
-  while (curr?.next) {
-    if (curr.val != 0) result.val += curr.val;
-    else {
-      if (result == null) result = head;
-      else {
-        result = result.next;
-        result.val = 0;
-      }
+    while (curr?.next) {
+        if (curr.val != 0) result.val += curr.val;
+        else {
+            if (result == null) result = head;
+            else {
+                result = result.next;
+                result.val = 0;
+            }
+        }
+        curr = curr.next;
     }
-    curr = curr.next;
-  }
-  result.next = null;
-  return head;
+    result.next = null;
+    return head;
 };

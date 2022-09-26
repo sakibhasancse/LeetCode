@@ -15,19 +15,19 @@
 // Explanation: [9, 4] is also accepted.
 
 var intersect = function (nums1, nums2) {
-  const elements = {};
+    const elements = {};
 
-  nums1.forEach((element) => {
-    elements[element] = elements[element] ? elements[element] + 1 : 1;
-  });
+    nums1.forEach((element) => {
+        elements[element] = elements[element] ? elements[element] + 1 : 1;
+    });
 
-  return nums2.filter((element) => {
-    if (elements[element]) {
-      elements[element]--;
-      return true;
-    }
-    return false;
-  });
+    return nums2.filter((element) => {
+        if (elements[element]) {
+            elements[element]--;
+            return true;
+        }
+        return false;
+    });
 };
 
 intersect([4, 7, 9, 5], [9, 4, 9, 8, 4]);

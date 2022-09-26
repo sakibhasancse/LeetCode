@@ -19,13 +19,13 @@
 // };
 
 var containsDuplicate = function (nums) {
-  const hashSet = new Set();
-  for (let num = 0; num < nums.length; num++) {
-    const element = nums[num];
-    if (hashSet.has(element)) return true;
-    else hashSet.add(element);
-  }
-  return false;
+    const hashSet = new Set();
+    for (let num = 0; num < nums.length; num++) {
+        const element = nums[num];
+        if (hashSet.has(element)) return true;
+        else hashSet.add(element);
+    }
+    return false;
 };
 
 console.log(containsDuplicate([1, 1, 1, 3, 3, 4, 3, 2, 4, 2]));

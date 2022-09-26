@@ -16,12 +16,12 @@
 // };
 
 var firstUniqChar = function (s) {
-  let arr = s ? s.split("") : s;
-  for (var i = 0; i < s.length; i++) {
-    if (arr.indexOf(arr[i]) === arr.lastIndexOf(arr[i])) return i;
-  }
-  return -1;
+    let arr = s ? s.split('') : s;
+    for (var i = 0; i < s.length; i++) {
+        if (arr.indexOf(arr[i]) === arr.lastIndexOf(arr[i])) return i;
+    }
+    return -1;
 };
 
-console.log(firstUniqChar("leetcode"));
-console.log(firstUniqChar("loveleetcode"));
+console.log(firstUniqChar('leetcode'));
+console.log(firstUniqChar('loveleetcode'));

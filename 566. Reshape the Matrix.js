@@ -20,53 +20,53 @@
 // };
 
 var matrixReshape = function (mat, r, c) {
-  if (r * c != mat.length * mat[0].length || mat.length === r) return mat;
-  else {
-    let newMat = [];
-    let columns = 0;
-    let values = [];
-    for (var i = 0; i < mat.length; i++) {
-      for (var j = 0; j < mat[0].length; j++) {
-        values.push(mat[i][j]);
-        columns++;
-        if (columns == c) {
-          newMat.push(values);
-          columns = 0;
-          values = [];
+    if (r * c != mat.length * mat[0].length || mat.length === r) return mat;
+    else {
+        let newMat = [];
+        let columns = 0;
+        let values = [];
+        for (var i = 0; i < mat.length; i++) {
+            for (var j = 0; j < mat[0].length; j++) {
+                values.push(mat[i][j]);
+                columns++;
+                if (columns == c) {
+                    newMat.push(values);
+                    columns = 0;
+                    values = [];
+                }
+            }
         }
-      }
+        return newMat;
     }
-    return newMat;
-  }
 };
 
 console.log(
-  matrixReshape(
-    [
-      [1, 2],
-      [3, 4],
-    ],
-    2,
-    4
-  )
+    matrixReshape(
+        [
+            [1, 2],
+            [3, 4]
+        ],
+        2,
+        4
+    )
 );
 console.log(
-  matrixReshape(
-    [
-      [1, 2],
-      [3, 4],
-    ],
-    1,
-    4
-  )
+    matrixReshape(
+        [
+            [1, 2],
+            [3, 4]
+        ],
+        1,
+        4
+    )
 );
 console.log(
-  matrixReshape(
-    [
-      [1, 2],
-      [3, 4],
-    ],
-    4,
-    4
-  )
+    matrixReshape(
+        [
+            [1, 2],
+            [3, 4]
+        ],
+        4,
+        4
+    )
 );

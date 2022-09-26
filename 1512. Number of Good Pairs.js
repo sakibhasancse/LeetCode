@@ -4,33 +4,33 @@
  */
 
 var numIdenticalPairsOne = function (nums) {
-  let numberOfGoodPair = 0;
-  for (let num = 0; num < nums.length; num++) {
-    const elementOne = nums[num];
-    for (let item = num + 1; item < nums.length; item++) {
-      const element = nums[item];
-      if (elementOne == element) numberOfGoodPair++;
+    let numberOfGoodPair = 0;
+    for (let num = 0; num < nums.length; num++) {
+        const elementOne = nums[num];
+        for (let item = num + 1; item < nums.length; item++) {
+            const element = nums[item];
+            if (elementOne == element) numberOfGoodPair++;
+        }
     }
-  }
-  return numberOfGoodPair;
+    return numberOfGoodPair;
 };
 
 var numIdenticalPairs = function (nums) {
-  let numberOfGoodPair = 0;
-  let hash = {};
-  for (let num = 0; num < nums.length; num++) {
-    const element = nums[num];
-    if (hash[element]) hash[element]++;
-    else hash[element] = 1;
-  }
-  for (const ddd in hash) {
-    const element = hash[ddd];
-    console.log({ element });
-    numberOfGoodPair += (element * (element - 1)) / 2;
-  }
-  console.log({ hash });
+    let numberOfGoodPair = 0;
+    let hash = {};
+    for (let num = 0; num < nums.length; num++) {
+        const element = nums[num];
+        if (hash[element]) hash[element]++;
+        else hash[element] = 1;
+    }
+    for (const ddd in hash) {
+        const element = hash[ddd];
+        console.log({ element });
+        numberOfGoodPair += (element * (element - 1)) / 2;
+    }
+    console.log({ hash });
 
-  return numberOfGoodPair;
+    return numberOfGoodPair;
 };
 // Example 1:
 

@@ -23,15 +23,15 @@
 // };
 
 var isValid = function (s) {
-  const stack = [];
-  const openSet = new Set(["(", "{", "["]);
-  for (let i = 0; i < s.length; i += 1) {
-    if (openSet.has(s[i])) {
-      stack.push(s[i]);
-    } else stack.pop();
-  }
+    const stack = [];
+    const openSet = new Set(['(', '{', '[']);
+    for (let i = 0; i < s.length; i += 1) {
+        if (openSet.has(s[i])) {
+            stack.push(s[i]);
+        } else stack.pop();
+    }
 
-  return stack.length === 0;
+    return stack.length === 0;
 };
 
-console.log(isValid("[()[]]{}[]"));
+console.log(isValid('[()[]]{}[]'));

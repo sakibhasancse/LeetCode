@@ -24,8 +24,8 @@
  */
 
 var lengthOfLastWord = function (s) {
-  const allWord = s.trim().split(" ");
-  return allWord.pop().length;
+    const allWord = s.trim().split(' ');
+    return allWord.pop().length;
 };
 
-console.log(lengthOfLastWord("luffy is still joyboy"));
+console.log(lengthOfLastWord('luffy is still joyboy'));

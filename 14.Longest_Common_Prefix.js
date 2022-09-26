@@ -31,16 +31,16 @@
 // };
 
 var longestCommonPrefix = function (strs) {
-  let prefix = strs[0];
+    let prefix = strs[0];
 
-  for (var i = 0; i < strs.length; i++) {
-    while (strs[i].indexOf(prefix) !== 0) {
-      prefix = prefix.substr(0, prefix.length - 1);
+    for (var i = 0; i < strs.length; i++) {
+        while (strs[i].indexOf(prefix) !== 0) {
+            prefix = prefix.substr(0, prefix.length - 1);
+        }
     }
-  }
 
-  return prefix;
+    return prefix;
 };
 
 // console.log(longestCommonPrefix(["kplas", "awlas", "lwqelas"]))
-console.log(longestCommonPrefix(["fqloererwer", "fqlerow", "hfhqlerreight"]));
+console.log(longestCommonPrefix(['fqloererwer', 'fqlerow', 'hfhqlerreight']));

@@ -11,16 +11,16 @@
  * @return {ListNode}
  */
 var removeElements = function (head, val) {
-  if (!head) return head;
-  let curr = head,
-    next = head?.next;
-  while (curr) {
-    while (next && next.val === val) {
-      next = next.next;
+    if (!head) return head;
+    let curr = head,
+        next = head?.next;
+    while (curr) {
+        while (next && next.val === val) {
+            next = next.next;
+        }
+        curr.next = next;
+        curr = next;
+        next = next?.next;
     }
-    curr.next = next;
-    curr = next;
-    next = next?.next;
-  }
-  return head;
+    return head;
 };
