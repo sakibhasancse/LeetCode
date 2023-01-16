@@ -24,3 +24,13 @@ var removeElements = function (head, val) {
     }
     return head;
 };
+
+//Recursive solutions
+var removeElements = function (head, val) {
+    while (head && head.val === val) {
+        head = head.next
+    }
+    if (!head) return head
+    head.next = removeElements(head.next, val)
+    return head;
+};
