@@ -10,6 +10,21 @@ var curry = function (fn) {
   };
 };
 
+var curry = function (fn) {
+  return function curried(...args) {
+    if (fn.length === args.length) return fn(...args);
+    else return function newFun(...nesw) { return curried(...args, ...nesw) }
+  };
+};
+
+var curry = function (fn) {
+  const storedArgs = [];
+  return function curried(...args) {
+    storedArgs.push(...args);
+    return storedArgs.length === fn.length ? fn(...storedArgs) : curried;
+  };
+};
+
 /**
  * function sum(a, b) { return a + b; }
  * const csum = curry(sum);
